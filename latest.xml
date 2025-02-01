@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/appxpackage/2010/10">
+    <PackageIdentity Name="Rihaan <" Publisher="CN=YourPublisher" Version="1.0.0.2" />
+    <Update>
+        <PackageUrl>https://sharkapps.vercel.app/apps/windows/download/winnotes</PackageUrl>
+        <UpdateVersion>1.0.0.2</UpdateVersion>
+        <ReleaseNotes>Bug fixes and performance improvements.</ReleaseNotes>
+    </Update>
+</Package>
