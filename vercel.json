@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/apps/windows/download/recycleai",
+            "destination": "https://github.com/sharktide/recycleAI-desktop-windows/releases/download/v1.2.1/RecycleAI.Windows.Setup.1.2.1.exe"
+        }
+    ]
+}
