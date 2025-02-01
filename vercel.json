@@ -7,6 +7,10 @@
         {
             "source": "/apps/windows/download/winnotes",
             "destination": "https://github.com/sharktide/winnotes/releases/download/v0.0.0/setup.exe"
+        },
+        {
+            "source": "/apps/windows/download/winnotes/latest",
+            "destination": "https://raw.githubusercontent.com/sharktide/appreleases/refs/heads/main/latest.xml"
         }
     ]
 }
