@@ -1,3 +1,25 @@
+/* Navigation Bar Styles */
+nav {
+    background-color: #24292f;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #0366d6;
+    border-radius: 5px;
+}
+
 /* Basic Styles */
 body {
     font-family: Arial, sans-serif;
@@ -25,7 +47,17 @@ body {
     padding: 2rem;
 }
 
-.project {
+.project01 {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.project02 {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -36,12 +68,22 @@ body {
     align-items: center;
 }
 
-.project h2 {
+.project01 h2 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
 
-.project p {
+.project02 h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.project01 p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.project02 p {
     font-size: 1.1rem;
     color: #666;
 }
