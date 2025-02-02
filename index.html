@@ -1,1 +1,156 @@
-This does not currently have a frontend ready for deployment yet. It is currently a server.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph Meta Tags for Rich Link Previews -->
+    <meta property="og:title" content="My Projects">
+    <meta property="og:description" content="A showcase of my projects with badges and links to the repositories.">
+    <meta property="og:image" content="https://img.shields.io/badge/Jupyter%20Notebook-100%25-brightgreen">
+    <meta property="og:url" content="https://github.com/sharktide">
+    
+    <title>My GitHub Projects</title>
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+            color: #333;
+        }
+
+        .header {
+            background-color: #24292f;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .project {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .badge-container {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .badge {
+            text-decoration: none;
+            padding: 0.3rem 1rem;
+            border-radius: 3px;
+            background-color: #4caf50;
+            color: white;
+            font-size: 1rem;
+            display: inline-block;
+        }
+
+        .badge img {
+            vertical-align: middle;
+            margin-right: 0.5rem;
+        }
+
+        footer {
+            background-color: #24292f;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .badge-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>My GitHub Projects</h1>
+    </div>
+
+    <div class="container">
+        <!-- Project 1 -->
+        <div class="project">
+            <div>
+                <h2>RecycleBot</h2>
+                <p>A bot for recycling tasks built with Python and Jupyter Notebook.</p>
+            </div>
+            <div class="badge-container">
+                <a href="https://github.com/sharktide/recyclebot" target="_blank" class="badge">
+                    <img src="https://img.shields.io/badge/Repo-GitHub-blue" alt="GitHub Repo">
+                    GitHub Repo
+                </a>
+                <a href="https://github.com/sharktide/recyclebot" target="_blank" class="badge">
+                    <img src="https://img.shields.io/badge/Jupyter%20Notebook-100%25-brightgreen" alt="Jupyter Notebook Badge">
+                    100% Complete
+                </a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+            <div>
+                <h2>WinNotes</h2>
+                <p>Better notes for windows</p>
+            </div>
+            <div class="badge-container">
+                <a href="https://github.com/sharktide/winnotes" target="_blank" class="badge">
+                    <img src="https://img.shields.io/badge/Repo-GitHub-blue" alt="GitHub Repo">
+                    GitHub Repo
+                </a>
+                <a href="https://github.com/sharktide/winnotes" target="_blank" class="badge">
+                    <img src="https://img.shields.io/badge/Build-Passing-brightgreen" alt="Build Status Badge">
+                    Build Passing
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><!--&copy; 2025 Your Name--></p>
+    </footer>
+
+</body>
+</html>
