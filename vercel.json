@@ -6,11 +6,16 @@
         },
         {
             "source": "/apps/windows/download/winnotes",
-            "destination": "https://github.com/sharktide/winnotes/releases/download/v1.0.0.1/Notes_1.0.0.1_x64.msix"
+            "destination": "https://github.com/sharktide/winnotes/releases/download/v0.0.2.0/Notes_0.0.2.0_x64.msix"
         },
         {
             "source": "/apps/windows/download/winnotes/latest",
             "destination": "https://raw.githubusercontent.com/sharktide/appreleases/refs/heads/main/latest.xml"
+        },
+        {
+            "source": "/apps/windows/download/winnotes/cer",
+            "destination": "https://github.com/sharktide/winnotes/releases/download/v0.0.2.0/Notes_0.0.2.0_x64.cer"
         }
+
     ]
 }
