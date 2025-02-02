@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/appxpackage/2010/10">
-    <PackageIdentity Name="WinNotes <" Publisher="CN=Rihaan Meher" Version="0.0.4.0" />
+    <PackageIdentity Name="WinNotes" Publisher="CN=Rihaan Meher" Version="0.0.4.0" />
     <Update>
         <PackageUrl>https://sharkapps.vercel.app/apps/windows/download/winnotes</PackageUrl>
         <UpdateVersion>0.0.4.0</UpdateVersion>
