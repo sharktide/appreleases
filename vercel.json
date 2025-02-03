@@ -30,7 +30,7 @@
         },
         {
             "source": "/projects",
-            "destination": "apps.html"
+            "destination": "projects.html"
         },
         {
             "source": "/home",
