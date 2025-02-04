@@ -17,10 +17,6 @@
             "destination": "https://github.com/sharktide/winnotes/releases/download/v0.0.5.0/Notes_0.0.5.0_x64.cer"
         },
         {
-            "source": "/recyclebot",
-            "destination": "https://recyclesmart.vercel.app/"
-        },
-        {
             "source": "/about",
             "destination": "about.html"
         },
@@ -37,5 +33,14 @@
             "destination": "index.html"
         }
 
+    ],
+
+    "redirects": [
+        {
+            "source": "/recyclebot",
+            "destination": "https://recyclesmart.vercel.app/"
+        }
     ]
+
+    
 }
