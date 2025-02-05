@@ -35,4 +35,19 @@
     margin-right: 10px;
 }
 
+.repositories {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.repositories a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.repo-image {
+    width: 400px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+}
 
