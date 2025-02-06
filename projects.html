@@ -11,9 +11,7 @@
     <meta property="og:url" content="https://github.com/sharktide">
     
     <title>sharktide</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="boxstyles.css">
-
+    <link rel="stylesheet" href="styles/projectstyles.css">
 
 </head>
 <body>
@@ -26,56 +24,58 @@
     </nav>
 
     <div class="container">
-        <!-- Project 1 -->
-        <button class="project01" id="01">
-            <div>
-                <h2>RecycleBot</h2>
-                <p>AI that can accurately sort recycling.</p>
-            </div>
-            <div class="badge-container">
-                <a href="https://github.com/sharktide/recyclebot" target="_blank" class="badge">
-                    <img src="https://img.shields.io/badge/Repo-GitHub-blue" alt="GitHub Repo">
-                    GitHub
-                </a>
-                <a href="https://github.com/sharktide/recyclebot" target="_blank" class="badge">
-                    <img src="https://img.shields.io/badge/Jupyter%20Notebook-94.8%25-orange" alt="Jupyter Notebook Badge">
-                    
-                    <img src="https://img.shields.io/badge/Python-5.2%25-blue" alt="Jupyter Notebook Badge">
-                    
-                </a>
-            </div>
-        </button>
+        <h1>Huggingface Model Repositories</h1>
+        <div>
+            <input type="text" id="search-bar-models" placeholder="Search models">
+        </div>
 
-        <!-- Project 2 -->
-        <button class="project02" id="02">
+        <div class="huggingface-models">
+            <a href="https://huggingface.co/sharktide/recyclebot0" class="card">
+                <div class="card-title">sharktide/recyclebot0</div>
+                <div class="card-owner">sharktide</div>
+                <div class="card-tags">Tags: #MachineLearning, #Recycling</div>
+                <div class="card-lib">
+                    <div class="circle"></div>
+                    TensorFlow
+                </div>
+            </a>
+        </div>
 
-            <div>
-                <h2>WinNotes</h2>
-                <p>Better notes for windows</p>
-            </div>
-            <div class="badge-container">
-                <a href="https://github.com/sharktide/winnotes" target="_blank" class="badge">
-                    <img src="https://img.shields.io/badge/Repo-GitHub-blue" alt="GitHub Repo">
-                    GitHub
-                </a>
-                <a href="https://github.com/sharktide/winnotes" target="_blank" class="badge">
-                    <img src="https://img.shields.io/badge/C%23-60%25-limegreen" alt="Jupyter Notebook Badge">
-                    
-                    <img src="https://img.shields.io/badge/XAML-40%25-skyblue" alt="Jupyter Notebook Badge">
-                    
-                </a>
-                <a href="https://github.com/sharktide/winnotes" target="_blank" class="badge">
-                    <img src="https://img.shields.io/badge/Build-Failing-red" alt="Build Status Badge">
-                    Build Failing
-                </a>
-            </div>
-        </button>
+        <h1>Github Repositories</h1>
+        <div>
+        <input type="text" id="search-bar-repos" placeholder="Search repositories">
+        </div>
+
+        <div class="github-repositories">
+            <a href="https://github.com/sharktide/recyclebot">
+                <img src="https://github-readme-stats.vercel.app/api/pin/?username=sharktide&repo=recyclebot&show_owner=true" id="recyclebot">
+            </a>
+            <a href="https://github.com/sharktide/tftools">
+                <img src="https://github-readme-stats.vercel.app/api/pin/?username=sharktide&repo=tftools&show_owner=true" id="tftools">
+            </a>
+            <a href="https://github.com/sharktide/winnotes">
+                <img src="https://github-readme-stats.vercel.app/api/pin/?username=sharktide&repo=winnotes&show_owner=true" id="winnotes">
+            </a>
+            <a href="https://github.com/sharktide/arduino-clock">
+                <img src="https://github-readme-stats.vercel.app/api/pin/?username=sharktide&repo=arduino-clock&show_owner=true" id="winnotes">
+            </a>
+            <a href="https://github.com/sharktide/arduino-keypadlock">
+                <img src="https://github-readme-stats.vercel.app/api/pin/?username=sharktide&repo=arduino-keypadlock&show_owner=true" id="winnotes">
+            </a>
+            <a href="https://github.com/sharktide/recyclesmart">
+                <img src="https://github-readme-stats.vercel.app/api/pin/?username=sharktide&repo=recyclesmart&show_owner=true" id="winnotes">
+            </a>
+            <a href="https://github.com/sharktide/recycleAI-desktop-windows">
+                <img src="https://github-readme-stats.vercel.app/api/pin/?username=sharktide&repo=recycleAI-desktop-windows&show_owner=true" id="winnotes">
+            </a>
+            <a href="https://github.com/sharktide/recycleai-api">
+                <img src="https://github-readme-stats.vercel.app/api/pin/?username=sharktide&repo=recycleAI-api&show_owner=true" id="winnotes">
+            </a>
+            <a href="https://github.com/sharktide/appreleases">
+                <img src="https://github-readme-stats.vercel.app/api/pin/?username=sharktide&repo=appreleases&show_owner=true" id="winnotes">
+            </a>
         </div>
     </div>
-
-    <footer>
-        <p><!--&copy; 2025 Your Name--></p>
-    </footer>
 
 </body>
 
