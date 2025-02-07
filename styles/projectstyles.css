@@ -166,7 +166,21 @@ footer {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #e36209;
+    margin-right: 5px;
+}
+
+/* Custom styles for the additional circle and text */
+.card-lib.image-classification {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: blue;
+    font-weight: bold;
+    margin-top: 8px; /* Space between the library text and image classification */
+}
+
+.card-lib.image-classification .circle {
+    background-color: blue;
     margin-right: 5px;
 }
 
