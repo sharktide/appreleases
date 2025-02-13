@@ -3,7 +3,7 @@ const currencyconv = document.getElementById("Currency Converter");
 
 async function checkforclick() {
     recyclebot.onclick = function() {
-        window.location.href = "/apps/recyclebot";
+        window.location.href = "https://recyclesmart.vercel.app";
     };
     recyclebot.addEventListener('mouseenter', function() {
         recyclebot.style.backgroundColor = 'lightgrey';
@@ -15,7 +15,7 @@ async function checkforclick() {
     
 
     currencyconv.onclick = function() {
-        window.location.href = "/apps/currencyconv";
+        window.location.href = "/pages.html?page=currencyconverter";
     };
     currencyconv.addEventListener('mouseenter', function() {
         currencyconv.style.backgroundColor = 'lightgrey';
