@@ -272,8 +272,8 @@ async function loadDownloadsHTML(projectName) {
 
         contentElement.innerHTML = html; // Insert the generated HTML into the container
     } catch (error) {
-        console.error('Error loading download data:', error);
-        contentElement.innerHTML = '<p>Failed to load download data. Please try again later.</p>';
+        //console.error('Error loading download data:', error);
+        //contentElement.innerHTML = '<p>Failed to load download data. Please try again later.</p>';
     }
 }
 
