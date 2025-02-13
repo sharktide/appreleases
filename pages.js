@@ -45,7 +45,7 @@ function singleColumnLayout(content) {
     );
 }
 
-/*
+
 
 // Function to generate HTML for Downloads
 async function loadDownloadsHTML(projectName) {
@@ -89,82 +89,6 @@ async function loadDownloadsHTML(projectName) {
         return '<p>Failed to load download data. Please try again later.</p>';
     }
 }
-*/
-
-// Function to generate HTML for Downloads
-async function loadDownloadsHTML(projectName) {
-    const contentElement = document.getElementById('container-right');
-    // Clear previous content
-    //contentElement.innerHTML = ''; // Uncomment this line to clear previous content
-
-    try {
-        const response = await fetch('data/downloads.json');
-        const downloadsData = await response.json();
-
-        if (!downloadsData[projectName]) {
-            contentElement.innerHTML = `<p>No downloads available for this project.</p>`;
-            return;
-        }
-
-        const projectData = downloadsData[projectName];
-        let html = `<h2>Downloads for ${projectName}</h2>`;
-
-        // Iterate through versions for this project
-        for (let version in projectData) {
-            const versionData = projectData[version];
-            html += `<h3>Version: ${version}</h3>`;
-
-            // Create platform dropdown
-            html += `<label for="platformSelect-${version}">Select Platform:</label>
-                     <select id="platformSelect-${version}" class="download-dropdown">
-                         <option value="">Select Platform</option>`;
-
-            // Loop through platforms (Windows, etc.) and create dropdown options
-            Object.keys(versionData.platforms).forEach(platform => {
-                html += `<option value="${platform}">${platform.charAt(0).toUpperCase() + platform.slice(1)}</option>`;
-            });
-
-            html += `</select>`;
-
-            // Container for download options (packed/unpacked)
-            html += `<div id="downloadOptions-${version}" class="download-options"></div>`;
-        }
-
-        // Insert HTML into the container for the download section
-        contentElement.innerHTML = html;
-
-        // Add event listeners for platform selection dropdowns
-        Object.keys(projectData).forEach(version => {
-            const platformSelect = document.getElementById(`platformSelect-${version}`);
-            platformSelect.addEventListener('change', function() {
-                const selectedPlatform = platformSelect.value;
-                const downloadOptionsContainer = document.getElementById(`downloadOptions-${version}`);
-
-                if (selectedPlatform) {
-                    const platformData = projectData[version].platforms[selectedPlatform];
-
-                    // Clear previous download options
-                    //downloadOptionsContainer.innerHTML = '';
-
-                    // Show packed/unpacked download links
-                    if (platformData.packed) {
-                        downloadOptionsContainer.innerHTML += `<p><strong>Packed:</strong> <a href="${platformData.packed}" target="_blank">Download</a></p>`;
-                    }
-
-                    if (platformData.unpacked) {
-                        downloadOptionsContainer.innerHTML += `<p><strong>Unpacked:</strong> <a href="${platformData.unpacked}" target="_blank">Download</a></p>`;
-                    }
-                } else {
-                    // Clear the download options if no platform is selected
-                    //downloadOptionsContainer.innerHTML = '';
-                }
-            });
-        });
-    } catch (error) {
-        console.error('Error loading download data:', error);
-        contentElement.innerHTML = '<p>Failed to load download data. Please try again later.</p>';
-    }
-}
 
 
 function loadContent() {
@@ -173,7 +97,7 @@ function loadContent() {
     const contentElement = document.getElementById('container');
   
     // Clear previous content
-    //contentElement.innerHTML = '';
+    contentElement.innerHTML = '';
   
     // Render content based on the 'page' query parameter
     if (page === 'currencyconverter') {
