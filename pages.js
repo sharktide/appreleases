@@ -102,9 +102,9 @@ function loadContent() {
     // Render content based on the 'page' query parameter
     if (page === 'currencyconverter') {
         let leftContent = head("Currency Converter", "A simple currency converter that can convert between over 150 currencies.") + repo("currency-converter") + api("currency-converter-api");
-        let rightContent = loadDownloadsHTML("currencyconverter")
-        console.log(rightContent)
-        contentElement.innerHTML = twoColumnLayout(leftContent, rightContent);
+        loadDownloadsHTML("currencyconverter").then(rightContent => {
+            contentElement.innerHTML = twoColumnLayout(leftContent, rightContent);
+        });
     } else if (page === 'about') {
         const content = head("About", "This is an about page that tells you more about my projects.");
         contentElement.innerHTML = singleColumnLayout(content);
