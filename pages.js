@@ -57,7 +57,7 @@ async function loadDownloadsHTML(projectName) {
         }
 
         const projectData = downloadsData[projectName];
-        html += `<h2>Downloads for ${projectName}</h2>`;
+        html += `<h2>Downloads</h2>`;
 
         // Iterate through versions for this project
         for (let version in projectData) {
@@ -71,7 +71,7 @@ async function loadDownloadsHTML(projectName) {
 
                 // Add download links (packed/unpacked)
                 if (platformData.packed) {
-                    html += `<p><strong>Packed:</strong> <a href="${platformData.packed}" target="_blank">Download</a></p>`;
+                    html += `<p><strong>Installer:</strong> <a href="${platformData.packed}" target="_blank">Download</a></p>`;
                 }
 
                 if (platformData.unpacked) {

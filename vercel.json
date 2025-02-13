@@ -31,6 +31,12 @@
         {
             "source": "/home",
             "destination": "index.html"
+        },
+
+
+        {
+            "source": "/apps/currencyconv",
+            "destination": "pages.html?page=currencyconverter"
         }
 
     ],
