@@ -1,0 +1,12 @@
+{
+    "currencyconverter": {
+        "0.0.0.0": {
+            "platforms": {
+                "windows": {
+                    "packed": "https://github.com/sharktide/currency-converter/releases/download/0.0.0.0/CurrencyConverterSetup.exe",
+                    "unpacked": "https://github.com/sharktide/currency-converter/releases/download/0.0.0.0-Unpacked/currency_converter_redist.zip"
+                }
+            }
+        }
+    }
+}

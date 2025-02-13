@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<AppInstaller Uri="https://sharkapps.vercel.app/winnotes.appinstaller"
-              xmlns="http://schemas.microsoft.com/appx/appinstaller/2017" 
-              IsAutoUpdateEnabled="true">
-  <MainPackage Uri="https://sharkapps.vercel.app/apps/windows/download/winnotes" Version="0.0.3.0" />
-  <UpdateSettings>
-    <UpdateUri>https://sharkapps.vercel.app/winnotes.appinstaller</UpdateUri>
-  </UpdateSettings>
-</AppInstaller>
