@@ -46,21 +46,18 @@ function singleColumnLayout(content) {
 
 // Function to generate HTML for Downloads
 async function loadDownloadsHTML(projectName) {
-    const contentElement = document.getElementById('container-right');
-    // Clear previous content if any
-    //contentElement.innerHTML = '';
+    let html = '';  // We'll return this as the result
 
     try {
         const response = await fetch('data/downloads.json');
         const downloadsData = await response.json();
 
         if (!downloadsData[projectName]) {
-            contentElement.innerHTML = `<p>No downloads available for this project.</p>`;
-            return;
+            return `<p>No downloads available for this project.</p>`;
         }
 
         const projectData = downloadsData[projectName];
-        let html = `<h2>Downloads for ${projectName}</h2>`;
+        html += `<h2>Downloads for ${projectName}</h2>`;
 
         // Iterate through versions for this project
         for (let version in projectData) {
@@ -87,35 +84,35 @@ async function loadDownloadsHTML(projectName) {
             html += `</details>`; // End version details
         }
 
-        contentElement.innerHTML = html; // Insert the generated HTML into the container
     } catch (error) {
-        console.error('Error loading download data:', error);
-        contentElement.innerHTML = '<p>Failed to load download data. Please try again later.</p>';
+        html = `<p>Failed to load download data. Please try again later.</p>`;
     }
+
+    return html; // Return the generated HTML as a string
 }
 
 function loadContent() {
     const params = new URLSearchParams(window.location.search);
     const page = params.get('page');
-    const contentElement = document.getElementById('container');
-
-    // Clear previous content
-    //contentElement.innerHTML = '';
+    let contentHtml = '';
 
     // Render content based on the 'page' query parameter
     if (page === 'currencyconverter') {
         let leftContent = head("Currency Converter", "A simple currency converter that can convert between over 150 currencies.") + repo("currency-converter") + api("currency-converter-api");
         
         loadDownloadsHTML("currencyconverter").then(rightContent => {
-            console.log(rightContent)
-            contentElement.innerHTML = twoColumnLayout(leftContent, rightContent);
+            contentHtml = twoColumnLayout(leftContent, rightContent);
+            document.getElementById('container').innerHTML = contentHtml;
         });
 
     } else if (page === 'about') {
         const content = head("About", "This is an about page that tells you more about my projects.");
-        contentElement.innerHTML = singleColumnLayout(content);
+        contentHtml = singleColumnLayout(content);
+        document.getElementById('container').innerHTML = contentHtml;
+
     } else {
-        contentElement.innerHTML = `<h2>404 - Page Not Found</h2><p>The page you requested does not exist.</p>`;
+        contentHtml = `<h2>404 - Page Not Found</h2><p>The page you requested does not exist.</p>`;
+        document.getElementById('container').innerHTML = contentHtml;
     }
 }
 
