@@ -222,8 +222,8 @@ async function loadDownloadsHTML(projectName) {
             });
         });
     } catch (error) {
-        console.error('Error loading download data:', error);
-        contentElement.innerHTML = '<p>Failed to load download data. Please try again later.</p>';
+        //console.error('Error loading download data:', error);
+        //contentElement.innerHTML = '<p>Failed to load download data. Please try again later.</p>';
     }
 }
 
