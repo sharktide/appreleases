@@ -163,7 +163,7 @@ function singleColumnLayout(content) {
         </div>`
     );
 }
-
+/*
 async function loadDownloadsHTML(projectName) {
     const contentElement = document.getElementById('container-right');
     //contentElement.innerHTML = '';
@@ -226,6 +226,57 @@ async function loadDownloadsHTML(projectName) {
         //contentElement.innerHTML = '<p>Failed to load download data. Please try again later.</p>';
     }
 }
+*/
+
+async function loadDownloadsHTML(projectName) {
+    const contentElement = document.getElementById('container-right');
+    // Clear previous content
+    contentElement.innerHTML = ''; 
+
+    try {
+        const response = await fetch('data/downloads.json');
+        const downloadsData = await response.json();
+
+        if (!downloadsData[projectName]) {
+            contentElement.innerHTML = `<p>No downloads available for this project.</p>`;
+            return;
+        }
+
+        const projectData = downloadsData[projectName];
+        let html = `<h2>Downloads for ${projectName}</h2>`;
+
+        // Iterate through versions for this project
+        for (let version in projectData) {
+            const versionData = projectData[version];
+            html += `<details><summary><strong>Version: ${version}</strong></summary>`;
+
+            // Iterate through platforms for the current version
+            Object.keys(versionData.platforms).forEach(platform => {
+                const platformData = versionData.platforms[platform];
+                html += `<details><summary><strong>${platform.charAt(0).toUpperCase() + platform.slice(1)}</strong></summary>`;
+
+                // Add download links (packed/unpacked)
+                if (platformData.packed) {
+                    html += `<p><strong>Packed:</strong> <a href="${platformData.packed}" target="_blank">Download</a></p>`;
+                }
+
+                if (platformData.unpacked) {
+                    html += `<p><strong>Unpacked:</strong> <a href="${platformData.unpacked}" target="_blank">Download</a></p>`;
+                }
+
+                html += `</details>`; // End platform details
+            });
+
+            html += `</details>`; // End version details
+        }
+
+        contentElement.innerHTML = html; // Insert the generated HTML into the container
+    } catch (error) {
+        console.error('Error loading download data:', error);
+        contentElement.innerHTML = '<p>Failed to load download data. Please try again later.</p>';
+    }
+}
+
 
 function loadContent() {
     const params = new URLSearchParams(window.location.search);
