@@ -231,7 +231,7 @@ async function loadDownloadsHTML(projectName) {
 async function loadDownloadsHTML(projectName) {
     const contentElement = document.getElementById('container-right');
     // Clear previous content
-    contentElement.innerHTML = ''; 
+    //contentElement.innerHTML = ''; 
 
     try {
         const response = await fetch('data/downloads.json');
