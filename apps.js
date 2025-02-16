@@ -15,7 +15,7 @@ async function checkforclick() {
     
 
     currencyconv.onclick = function() {
-        window.location.href = "/pages.html?page=currencyconverter";
+        window.location.href = "/pages?page=currencyconverter";
     };
     currencyconv.addEventListener('mouseenter', function() {
         currencyconv.style.backgroundColor = 'lightgrey';
